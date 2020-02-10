@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".SignupActivity">
+
+    <TextView
+        android:id="@+id/sign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:textSize="@dimen/tsize"
+        android:textColor="@color/colorLine"
+        android:text="@string/sign_up"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        app:layout_constraintTop_toBottomOf="@+id/sign">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorAccent" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/passInputLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/margin"
+    android:layout_marginStart="@dimen/margin"
+    android:layout_marginTop="@dimen/pdstart"
+    app:layout_constraintTop_toBottomOf="@+id/nameInputLayout"
+    tools:layout_editor_absoluteX="16dp">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorLine"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingStart="@dimen/pdstart"
+        android:paddingEnd="@dimen/pdstart"
+        android:textColor="@color/colorAccent" />
+
+</com.google.android.material.textfield.TextInputLayout>
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/lastInputLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="@dimen/margin"-->
+<!--        android:layout_marginStart="@dimen/margin"-->
+<!--        android:layout_marginTop="@dimen/pdstart"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/firstInputLayout"-->
+<!--        tools:layout_editor_absoluteX="16dp">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/lastName"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:backgroundTint="@color/colorLine"-->
+<!--            android:hint="@string/last_name"-->
+<!--            android:inputType="textPersonName"-->
+<!--            android:paddingStart="@dimen/pdstart"-->
+<!--            android:paddingEnd="@dimen/pdstart"-->
+<!--            android:textColor="@color/colorAccent" />-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/pdstart"
+        app:layout_constraintTop_toBottomOf="@+id/passInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorLine"
+            android:inputType="textEmailAddress"
+            android:hint="@string/email"
+            android:paddingStart="@dimen/pdstart"
+            android:paddingEnd="@dimen/pdstart"
+            android:textColor="@color/colorAccent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/pdstart"
+        style="@android:style/Widget.Material.Spinner.Underlined"
+        app:layout_constraintTop_toBottomOf="@+id/emailInputLayout" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/pdstart"
+        android:layout_marginTop="@dimen/pdstart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner">
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingEnd="@dimen/mst"
+            android:paddingStart="@dimen/pd"
+            android:padding="@dimen/pd"
+            android:text="@string/gender"
+            android:textColor="@color/colorLine"
+            android:textSize="@dimen/gender_size" />
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/pdstart"
+            android:paddingEnd="@dimen/pdstart"
+            android:text="@string/male"
+            android:textAlignment="center"
+            android:textSize="@dimen/tsz" />
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/pdstart"
+            android:paddingEnd="@dimen/pdstart"
+            android:text="@string/female"
+            android:textSize="@dimen/tsz" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/next"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:background="@drawable/button_background"
+        android:text="@string/next"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

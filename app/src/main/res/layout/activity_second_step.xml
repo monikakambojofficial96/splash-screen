@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".SecondStep">
+
+        <TextView
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:text="@string/welcome_second_step"
+        android:textColor="@color/colorLine"
+        android:textSize="@dimen/txtSize"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/addressInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        app:layout_constraintTop_toBottomOf="@+id/welcome">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorLine"
+            android:maxLines="1"
+            android:hint="@string/address"
+            android:paddingStart="@dimen/pdstart"
+            android:paddingEnd="@dimen/pdstart"
+            android:textColor="@color/colorAccent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/officeInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/pdstart"
+        app:layout_constraintTop_toBottomOf="@+id/addressInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/office"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorLine"
+            android:hint="@string/office_address"
+            android:maxLines="1"
+            android:paddingStart="@dimen/pdstart"
+            android:paddingEnd="@dimen/pdstart"
+            android:textColor="@color/colorAccent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mobileInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pdstart"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        app:layout_constraintTop_toBottomOf="@+id/officeInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorLine"
+            android:hint="@string/mobile_number"
+            android:maxLength="10"
+            android:inputType="number"
+            android:paddingStart="@dimen/pdstart"
+            android:paddingEnd="@dimen/pdstart"
+            android:textColor="@color/colorAccent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/hobbies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorLine"
+        android:text="@string/hobbies"
+        android:layout_marginTop="@dimen/pdstart"
+        android:textSize="@dimen/gender_size"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        app:layout_constraintTop_toBottomOf="@id/mobileInputLayout" />
+
+
+    <CheckBox
+        android:id="@+id/booksreading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/chmrg"
+        android:layout_marginTop="@dimen/chtop"
+        android:text="@string/books_reading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hobbies" />
+
+    <CheckBox
+        android:id="@+id/newspaper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/chmrg"
+        android:layout_marginTop="@dimen/cht"
+        android:text="@string/newspaper_reading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/booksreading" />
+
+    <CheckBox
+        android:id="@+id/sports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/chmrg"
+        android:layout_marginTop="@dimen/chb"
+        android:text="@string/sports"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newspaper" />
+
+    <CheckBox
+        android:id="@+id/movies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/chmrg"
+        android:layout_marginTop="@dimen/chb"
+        android:text="@string/movies"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sports" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/next"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:background="@drawable/button_background"
+        android:text="@string/next"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintTop_toBottomOf="@id/movies" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

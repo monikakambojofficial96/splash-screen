@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/image_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="visible"
+        app:srcCompat="@drawable/logo"
+        android:contentDescription="@string/todo" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/userInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        android:layout_marginEnd="@dimen/margin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/user_name"
+            android:textColor="@color/colorAccent" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/margin"
+            app:layout_constraintTop_toBottomOf="@+id/userInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorLine"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/pdstart"
+                android:paddingEnd="@dimen/pdstart"
+                android:textColor="@color/colorAccent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+<!--</LinearLayout>-->
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/mt"
+        android:layout_marginEnd="@dimen/margin"
+        android:background="@drawable/button_background"
+        android:text="@string/login"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toTopOf="@+id/remember"
+        app:layout_constraintTop_toBottomOf="@+id/passInputLayout" />
+
+    <CheckBox
+        android:id="@+id/remember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/checktop"
+        android:layout_marginEnd="@dimen/margin"
+        android:gravity="center"
+        android:paddingStart="@dimen/pdstart"
+        android:paddingEnd="@dimen/pdstart"
+        android:text="@string/remember_me"
+        android:textColor="@color/colorLine"
+        android:textSize="@dimen/txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login" />
+
+    <TextView
+        android:id="@+id/signupnow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/mt"
+        android:layout_marginEnd="@dimen/margin"
+        android:gravity="center"
+        android:text="@string/signup_now"
+        android:textColor="@color/colorLine"
+        android:textSize="@dimen/txt"
+        app:layout_constraintTop_toBottomOf="@+id/remember" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">TaskWithSplashScreen</string>
+    <string name="splash_screen">SPLASH SCREEN</string>
+    <string name="password">Password*</string>
+    <string name="user_name">User Name*</string>
+    <string name="login">login</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="signup_now">Not a member? Signup Now</string>
+    <string name="home_activity">This is your Home Activity</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="first_name">First Name*</string>
+    <string name="last_name">Last Name*</string>
+    <string name="email">Email*</string>
+    <string name="select_city">Select City</string>
+    <string name="gender"> Gender :</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="next">Next</string>
+    <string name="welcome_second_step">Welcome Second Step</string>
+    <string name="address">Address*</string>
+    <string name="office_address">Office Address*</string>
+    <string name="mobile_number">Mobile Number*</string>
+    <string name="hobbies">Hobbies:</string>
+    <string name="books_reading">Books Reading</string>
+    <string name="newspaper_reading">NewsPaper Reading</string>
+    <string name="sports">Sports</string>
+    <string name="movies">Movies</string>
+    <string name="enter_your_otp">Enter Your OTP</string>
+    <string name="submit">SUBMIT</string>
+    <string name="todo">TODO</string>
+    <string name="name">Name</string>
+    <string name="log_out">Log out</string>
+</resources>

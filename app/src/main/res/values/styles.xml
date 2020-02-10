@@ -1,0 +1,16 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="dropDownListViewStyle">@style/DropDownDivider</item>
+    </style>
+    <style name="DropDownDivider" parent="Widget.AppCompat.ListView.DropDown">
+        <item name="android:divider" >@color/colorLine</item>
+        <item name="android:dividerHeight">1dp </item>
+    </style>
+
+</resources>

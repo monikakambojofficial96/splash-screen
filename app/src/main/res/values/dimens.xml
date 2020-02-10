@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="txtSize">20sp</dimen>
+    <dimen name="padding">90dp</dimen>
+    <dimen name="pdstart">10dp</dimen>
+    <dimen name="margin">60dp</dimen>
+    <dimen name="txt">15sp</dimen>
+    <dimen name="mt">15dp</dimen>
+    <dimen name="checktop">13dp</dimen>
+    <dimen name="tsize">30sp</dimen>
+    <dimen name="gender_size">19sp</dimen>
+    <dimen name="next">20dp</dimen>
+    <dimen name="tp">140dp</dimen>
+    <dimen name="mstart">137dp</dimen>
+    <dimen name="mst">19dp</dimen>
+    <dimen name="md">154dp</dimen>
+    <dimen name="pd">2dp</dimen>
+    <dimen name="chmrg">60dp</dimen>
+    <dimen name="chtop">20dp</dimen>
+    <dimen name="cht">12dp</dimen>
+    <dimen name="chb">8dp</dimen>
+    <dimen name="tsz">17sp</dimen>
+</resources>
