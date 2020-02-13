@@ -18,7 +18,6 @@ public class LoginActivity extends AppCompatActivity {
 
     public EditText username, password;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
                 String user = username.getText().toString();
                 String pass = password.getText().toString();
 
-                SharedPreferences preferences = getSharedPreferences("mypref", MODE_PRIVATE);
+                SharedPreferences preferences = getSharedPreferences(Constants.PREFERENCES, MODE_PRIVATE);
                 String uName = preferences.getString(Constants.NAME, user);
                 String uPass = preferences.getString(Constants.PASS, pass);
 

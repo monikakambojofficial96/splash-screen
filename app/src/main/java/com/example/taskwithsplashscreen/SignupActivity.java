@@ -1,9 +1,9 @@
 package com.example.taskwithsplashscreen;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -13,12 +13,14 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
-
+import androidx.appcompat.app.AppCompatActivity;
 import com.example.taskwithsplashscreen.utils.Constants;
 import java.util.ArrayList;
 
 
 public class SignupActivity extends AppCompatActivity {
+
+//    DatabaseHelper mydb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,16 @@ public class SignupActivity extends AppCompatActivity {
         final EditText uName = findViewById(R.id.Name);
         final EditText upass = findViewById(R.id.pass);
         final EditText email = findViewById(R.id.email);
+        RadioGroup radioGroup=findViewById(R.id.radioGroup);
+        int selected=radioGroup.getCheckedRadioButtonId();
+        final RadioButton gender=findViewById(selected);
+//        mydb = new DatabaseHelper ( this );
+
+
+
+
+
+
 
 
 
@@ -68,20 +80,26 @@ public class SignupActivity extends AppCompatActivity {
 
         next.setOnClickListener(new View.OnClickListener() {
 
-            RadioGroup radioGroup=findViewById(R.id.radioGroup);
             @Override
             public void onClick(View v) {
 
-                final String name, password, emailId;
-                int selected=  radioGroup.getCheckedRadioButtonId();
-                RadioButton gender=findViewById(selected);
+                RadioGroup radioGroup = findViewById(R.id.radioGroup);
+                 String name, password, emailId,genderId="",cityId;
 
-//                Toast.makeText(getApplicationContext(),gender.getText(),Toast.LENGTH_SHORT).show();
+                int selected = radioGroup.getCheckedRadioButtonId();
+                if (selected == R.id.male) {
+
+                    Toast.makeText(SignupActivity.this,"male selected",Toast.LENGTH_SHORT).show();
+                    genderId="Male";
+                } else if (selected == R.id.female) {
+                    genderId="Female";
+                    Toast.makeText(SignupActivity.this, "female selected", Toast.LENGTH_SHORT).show();
+                }
 
                 name = uName.getText().toString();
                 password = upass.getText().toString();
                 emailId = email.getText().toString();
-//                genderId=gender.getCheckedRadioButtonId();
+                cityId=city.getSelectedItem().toString();
 
                 if (name.length() == 0) {
                     uName.requestFocus();
@@ -104,14 +122,10 @@ public class SignupActivity extends AppCompatActivity {
                 } else if (!emailId.matches("^([a-zA-Z0-9_\\-.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$+")) {
                     email.requestFocus();
                     email.setError("Invalid Email Address");
-                }
-                else if(selected==0){
-                    gender.requestFocus();
-                    gender.setError("");
-                }
 
+                }
                 else {
-                    SharedPreferences preferences = getSharedPreferences("mypref", MODE_PRIVATE);
+                    SharedPreferences preferences = getSharedPreferences(Constants.PREFERENCES, MODE_PRIVATE);
                     String newUser = uName.getText().toString();
                     String newPass = upass.getText().toString();
                     String newEmail = email.getText().toString();
@@ -123,8 +137,15 @@ public class SignupActivity extends AppCompatActivity {
 
                     editor.apply();
 
+                    Bundle bundle=new Bundle();
+                    bundle.putString(Constants.USERNAME,name);
+                    bundle.putString(Constants.USEREMAIL,emailId);
+                    bundle.putString( Constants.USERCITY ,cityId);
+                    bundle.putString(Constants.GENDER,genderId);
                     Intent intent = new Intent(SignupActivity.this, SecondStep.class);
+                    intent.putExtras(bundle);
                     startActivity(intent);
+                    intent.putExtra(Constants.GENDER, (Parcelable) gender);
 
 
                 }

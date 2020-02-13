@@ -30,4 +30,7 @@
     <string name="todo">TODO</string>
     <string name="name">Name</string>
     <string name="log_out">Log out</string>
+    <string name="phone">Phone*</string>
+    <string name="save">SAVE</string>
+    <string name="enter_your_data">Enter your data</string>
 </resources>

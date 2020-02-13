@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 public class MyOtpActivity extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -124,11 +126,9 @@ public class MyOtpActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Toast.makeText(MyOtpActivity.this,"Your Information Submitted",Toast.LENGTH_SHORT).show();
-
                 Intent intent=new Intent(MyOtpActivity.this,HomeActivity.class);
-                startActivity(intent);
+                startActivity ( intent );
+
             }
         });
 

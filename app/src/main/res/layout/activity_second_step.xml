@@ -113,6 +113,7 @@
         android:layout_marginStart="@dimen/chmrg"
         android:layout_marginTop="@dimen/chtop"
         android:text="@string/books_reading"
+        android:onClick="onCheckboxClicked"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/hobbies" />
 
@@ -123,6 +124,7 @@
         android:layout_marginStart="@dimen/chmrg"
         android:layout_marginTop="@dimen/cht"
         android:text="@string/newspaper_reading"
+        android:onClick="onCheckboxClicked"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/booksreading" />
 
@@ -133,6 +135,7 @@
         android:layout_marginStart="@dimen/chmrg"
         android:layout_marginTop="@dimen/chb"
         android:text="@string/sports"
+        android:onClick="onCheckboxClicked"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/newspaper" />
 
@@ -143,6 +146,7 @@
         android:layout_marginStart="@dimen/chmrg"
         android:layout_marginTop="@dimen/chb"
         android:text="@string/movies"
+        android:onClick="onCheckboxClicked"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sports" />
 
@@ -154,7 +158,7 @@
         android:layout_marginStart="@dimen/margin"
         android:layout_marginEnd="@dimen/margin"
         android:background="@drawable/button_background"
-        android:text="@string/next"
+        android:text="@string/save"
         android:textColor="@color/colorWhite"
         app:layout_constraintTop_toBottomOf="@id/movies" />
 
