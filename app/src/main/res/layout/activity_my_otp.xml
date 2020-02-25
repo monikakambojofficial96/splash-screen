@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:orientation="horizontal"
     android:layout_height="match_parent"
-    tools:context=".MyOtpActivity">
+    tools:context=".views.MyOtpActivity">
 
 
     <TextView
-        android:id="@+id/enterText"
+        android:id="@+id/activity_my_otp_tb_enterText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/tp"
@@ -24,46 +24,46 @@
 
     <EditText
 
-        android:id="@+id/one"
+        android:id="@+id/activity_my_otp_et_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/mstart"
         android:layout_marginTop="@dimen/margin"
         android:inputType="numberPassword"
         android:maxLength="1"
-        app:layout_constraintBaseline_toBaselineOf="@+id/two"
+        app:layout_constraintBaseline_toBaselineOf="@+id/activity_my_otp_et_two"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/enterText" />
+        app:layout_constraintTop_toBottomOf="@id/activity_my_otp_tb_enterText" />
 
     <EditText
 
-        android:id="@+id/two"
+        android:id="@+id/activity_my_otp_et_two"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/mst"
         android:layout_marginTop="@dimen/margin"
         android:inputType="numberPassword"
         android:maxLength="1"
-        app:layout_constraintBaseline_toBaselineOf="@+id/three"
-        app:layout_constraintStart_toEndOf="@+id/one"
-        app:layout_constraintTop_toBottomOf="@id/enterText" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/activity_my_otp_et_three"
+        app:layout_constraintStart_toEndOf="@+id/activity_my_otp_et_one"
+        app:layout_constraintTop_toBottomOf="@id/activity_my_otp_tb_enterText" />
 
     <EditText
 
-        android:id="@+id/three"
+        android:id="@+id/activity_my_otp_et_three"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/mst"
         android:layout_marginTop="@dimen/margin"
         android:inputType="numberPassword"
         android:maxLength="1"
-        app:layout_constraintBaseline_toBaselineOf="@+id/four"
-        app:layout_constraintStart_toEndOf="@+id/two"
-        app:layout_constraintTop_toBottomOf="@id/enterText" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/activity_my_otp_et_four"
+        app:layout_constraintStart_toEndOf="@+id/activity_my_otp_et_two"
+        app:layout_constraintTop_toBottomOf="@id/activity_my_otp_tb_enterText" />
 
     <EditText
 
-        android:id="@+id/four"
+        android:id="@+id/activity_my_otp_et_four"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/mst"
@@ -72,11 +72,11 @@
         android:inputType="numberPassword"
         android:maxLength="1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/three"
-        app:layout_constraintTop_toBottomOf="@id/enterText" />
+        app:layout_constraintStart_toEndOf="@+id/activity_my_otp_et_three"
+        app:layout_constraintTop_toBottomOf="@id/activity_my_otp_tb_enterText" />
 
     <Button
-        android:id="@+id/submit"
+        android:id="@+id/activity_my_otp_btn_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/button_background"
@@ -87,7 +87,7 @@
         android:textColor="@color/colorWhite"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="321dp"
-        app:layout_constraintTop_toBottomOf="@+id/one"/>
+        app:layout_constraintTop_toBottomOf="@+id/activity_my_otp_et_one"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

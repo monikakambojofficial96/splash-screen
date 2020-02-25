@@ -9,10 +9,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".SignupActivity">
+    tools:context=".views.SignupActivity">
 
     <TextView
-        android:id="@+id/sign"
+        android:id="@+id/activity_sign_up_et_sign_up"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -26,16 +26,16 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nameInputLayout"
+        android:id="@+id/activity_sign_up_layout_name_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin"
         android:layout_marginStart="@dimen/margin"
         android:layout_marginEnd="@dimen/margin"
-        app:layout_constraintTop_toBottomOf="@+id/sign">
+        app:layout_constraintTop_toBottomOf="@+id/activity_sign_up_et_sign_up">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/Name"
+            android:id="@+id/activity_sign_up_et_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/name"
@@ -46,17 +46,17 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-    android:id="@+id/passInputLayout"
+    android:id="@+id/activity_sign_up_layout_pass_input_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginEnd="@dimen/margin"
     android:layout_marginStart="@dimen/margin"
     android:layout_marginTop="@dimen/pdstart"
-    app:layout_constraintTop_toBottomOf="@+id/nameInputLayout"
+    app:layout_constraintTop_toBottomOf="@+id/activity_sign_up_layout_name_input_layout"
     tools:layout_editor_absoluteX="16dp">
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/pass"
+        android:id="@+id/activity_sign_up_et_pass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/colorLine"
@@ -68,40 +68,17 @@
 
 </com.google.android.material.textfield.TextInputLayout>
 
-<!--    <com.google.android.material.textfield.TextInputLayout-->
-<!--        android:id="@+id/lastInputLayout"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginEnd="@dimen/margin"-->
-<!--        android:layout_marginStart="@dimen/margin"-->
-<!--        android:layout_marginTop="@dimen/pdstart"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/firstInputLayout"-->
-<!--        tools:layout_editor_absoluteX="16dp">-->
-
-<!--        <com.google.android.material.textfield.TextInputEditText-->
-<!--            android:id="@+id/lastName"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:backgroundTint="@color/colorLine"-->
-<!--            android:hint="@string/last_name"-->
-<!--            android:inputType="textPersonName"-->
-<!--            android:paddingStart="@dimen/pdstart"-->
-<!--            android:paddingEnd="@dimen/pdstart"-->
-<!--            android:textColor="@color/colorAccent" />-->
-
-<!--    </com.google.android.material.textfield.TextInputLayout>-->
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailInputLayout"
+        android:id="@+id/activity_sign_up_layout_email_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin"
         android:layout_marginStart="@dimen/margin"
         android:layout_marginTop="@dimen/pdstart"
-        app:layout_constraintTop_toBottomOf="@+id/passInputLayout">
+        app:layout_constraintTop_toBottomOf="@+id/activity_sign_up_layout_pass_input_layout">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email"
+            android:id="@+id/activity_sign_up_et_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorLine"
@@ -114,18 +91,18 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/activity_sign_up_et_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin"
         android:layout_marginStart="@dimen/margin"
         android:layout_marginTop="@dimen/pdstart"
         style="@android:style/Widget.Material.Spinner.Underlined"
-        app:layout_constraintTop_toBottomOf="@+id/emailInputLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/activity_sign_up_layout_email_input_layout" />
 
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/activity_sign_up_et_radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -133,10 +110,10 @@
         android:layout_marginTop="@dimen/pdstart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spinner">
+        app:layout_constraintTop_toBottomOf="@id/activity_sign_up_et_spinner">
 
         <TextView
-            android:id="@+id/gender"
+            android:id="@+id/activity_sign_up_et_gender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -148,7 +125,7 @@
             android:textSize="@dimen/gender_size" />
 
         <RadioButton
-            android:id="@+id/male"
+            android:id="@+id/activity_sign_up_et_male"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingStart="@dimen/pdstart"
@@ -158,7 +135,7 @@
             android:textSize="@dimen/tsz" />
 
         <RadioButton
-            android:id="@+id/female"
+            android:id="@+id/activity_sign_up_et_female"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingStart="@dimen/pdstart"
@@ -168,7 +145,7 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/next"
+        android:id="@+id/activity_second_step_et_next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/next"
@@ -177,7 +154,7 @@
         android:background="@drawable/button_background"
         android:text="@string/next"
         android:textColor="@color/colorWhite"
-        app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@id/activity_sign_up_et_radioGroup" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

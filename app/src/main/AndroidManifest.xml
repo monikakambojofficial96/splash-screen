@@ -10,13 +10,13 @@ android:name=".TaskWithSplashScreenApplication"
         android:roundIcon="@drawable/net"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MyOtpActivity" />
-        <activity android:name=".SecondStep" />
-        <activity android:name=".SignupActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".views.MyOtpActivity" />
+        <activity android:name=".views.SecondStep" />
+        <activity android:name=".views.SignupActivity" />
+        <activity android:name=".views.HomeActivity" />
+        <activity android:name=".views.LoginActivity" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".views.SplashActivity"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
@@ -25,7 +25,7 @@ android:name=".TaskWithSplashScreenApplication"
         </intent-filter>
 
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".views.MainActivity" />
     </application>
 
 </manifest>

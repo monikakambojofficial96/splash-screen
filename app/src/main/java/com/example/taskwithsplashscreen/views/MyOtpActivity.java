@@ -1,4 +1,4 @@
-package com.example.taskwithsplashscreen;
+package com.example.taskwithsplashscreen.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
@@ -8,22 +8,21 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-public class MyOtpActivity extends AppCompatActivity {
+import com.example.taskwithsplashscreen.R;
 
-
+public class MyOtpActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_otp);
+        setContentView( R.layout.activity_my_otp);
 
-        final Button submit=findViewById(R.id.submit);
-        final EditText etFirstDigit=findViewById(R.id.one);
-        final EditText etSecondDigit =findViewById(R.id.two);
-        final EditText etThirdDigit=findViewById(R.id.three);
-        final EditText etFourthDigit=findViewById(R.id.four);
+        final Button btnSubmit=findViewById(R.id.activity_my_otp_btn_submit );
+        final EditText etFirstDigit=findViewById(R.id.activity_my_otp_et_one );
+        final EditText etSecondDigit =findViewById(R.id.activity_my_otp_et_two );
+        final EditText etThirdDigit=findViewById(R.id.activity_my_otp_et_three );
+        final EditText etFourthDigit=findViewById(R.id.activity_my_otp_et_four);
 
 
         etFirstDigit.addTextChangedListener(new TextWatcher() {
@@ -112,7 +111,7 @@ public class MyOtpActivity extends AppCompatActivity {
                 if(etFourthDigit.getText().length()==1)
                 {
                     etFourthDigit.clearFocus();
-                    submit.requestFocus();
+                    btnSubmit.requestFocus();
 
                 }
             }
@@ -123,7 +122,7 @@ public class MyOtpActivity extends AppCompatActivity {
             }
         });
 
-        submit.setOnClickListener(new View.OnClickListener() {
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MyOtpActivity.this,HomeActivity.class);
@@ -132,6 +131,6 @@ public class MyOtpActivity extends AppCompatActivity {
             }
         });
 
-
     }
+
 }

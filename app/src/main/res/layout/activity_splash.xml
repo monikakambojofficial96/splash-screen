@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashActivity">
+    tools:context=".views.SplashActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/activity_my_otp_img_imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="@dimen/padding"
@@ -16,18 +16,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/net" />
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/textView"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:gravity="center_horizontal"-->
-    <!--        android:paddingStart="4dp"-->
-    <!--        android:paddingEnd="4dp"-->
-    <!--        android:text="@string/splash_screen"-->
-    <!--        android:textColor="@color/colorAccent"-->
-    <!--        android:textSize="@dimen/txtSize"-->
-    <!--        tools:layout_editor_absoluteX="124dp"-->
-    <!--        tools:layout_editor_absoluteY="613dp" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
